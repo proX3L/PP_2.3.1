@@ -19,7 +19,7 @@ public class CarServiceImpl implements CarService {
 
     @Override
     public List<Car> getCars(int count) {
-        //return count >= 5 ? carDao.getCars() : carDao.getCars(count);
-        return getCars();
+        return (count >= 5 || count == 0) ? carDao.getCars() : carDao.getCars(count);
+        //return getCars();
     }
 }
